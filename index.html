@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>30-Day Content Planner - free posting calendar for creators</title>
+<meta name="description" content="Free 30-day content planner. Get a posting calendar with ideas, hooks, caption drafts and hashtags for Instagram, YouTube Shorts and more. Export to Excel.">
+<meta name="theme-color" content="#0a0a12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="./"><span class="logo">📅</span><span>Content Planner</span></a>
+ <div class="hd-actions"><button class="iconbtn" id="themeBtn" type="button" aria-label="Switch dark or light mode">☀️ Light</button></div>
+</div></header>
+<main class="wrap">
+ <section class="hero"><span class="badge">✨ Free · No login · Saved in your browser</span>
+  <h1>30 din ka content plan, <em>ek minute me.</em></h1>
+  <p>Pick your niche, goal and posting speed. Get a full calendar with ideas, hooks, caption drafts and hashtags. Edit anything, tick posts as done, export to Excel.</p></section>
+
+ <section class="card setup" id="setup">
+  <div class="sgrid">
+   <div><label class="lb" for="niche">Niche</label><select id="niche"></select></div>
+   <div><label class="lb" for="goal">Goal</label><select id="goal"></select></div>
+   <div><label class="lb" for="platform">Platform</label><select id="platform"><option>Instagram</option><option>YouTube</option><option>Facebook</option><option>LinkedIn</option><option>X</option></select></div>
+   <div><label class="lb" for="freq">Posts per week</label><select id="freq"><option value="3">3 (easy)</option><option value="5" selected>5 (steady)</option><option value="7">7 (daily)</option></select></div>
+   <div><label class="lb" for="lang">Caption language</label><select id="lang"><option value="en">English</option><option value="hi">Hinglish</option></select></div>
+   <div><label class="lb" for="start">Start date</label><input type="date" id="start"></div>
+   <div><label class="lb" for="name">Your name / brand (optional)</label><input type="text" id="name" maxlength="40" placeholder="e.g. Akash"></div>
+   <div><label class="lb" for="aud">Audience (optional)</label><input type="text" id="aud" maxlength="60" placeholder="e.g. college students"></div>
+  </div>
+  <div class="row"><button class="btn" id="gen" type="button">✨ Make my 30-day plan</button><span class="muted small">Ideas come from templates, not live trends. Fill the [brackets] with your own details.</span></div>
+ </section>
+
+ <section id="planArea" hidden>
+  <div class="card bar">
+   <div class="prog"><div class="progtext"><b id="doneN">0</b> of <b id="totalN">0</b> posts done</div><div class="meter"><i id="meter"></i></div></div>
+   <div class="row">
+    <div class="tabs" role="tablist" aria-label="View"><button role="tab" id="vList" aria-selected="true" type="button">List</button><button role="tab" id="vCal" aria-selected="false" type="button">Calendar</button></div>
+    <button class="btn sm" id="xlsx" type="button">⬇ Excel</button>
+    <button class="btn ghost sm" id="csv" type="button">CSV</button>
+    <button class="btn ghost sm" id="copyall" type="button">Copy all</button>
+    <button class="btn ghost sm" id="print" type="button">Print</button>
+    <button class="btn ghost sm" id="reset" type="button">New plan</button>
+   </div>
+  </div>
+  <div id="cal" hidden></div>
+  <div id="list" class="list"></div>
+ </section>
+
+ <section class="card tips"><h2>How it works</h2><ol class="muted"><li>Choose niche, goal, platform and posting speed, then make the plan.</li><li>Every post day has a format (Reel, Carousel, Story, Post, Live), an idea, a hook, a caption draft and hashtags.</li><li>Tap <b>Swap idea</b> if a day does not fit. Edit the caption. Tick <b>Done</b> after posting.</li><li>Export to Excel to share with your team or print it.</li></ol>
+ <p class="muted small">Honest note: this is a template-based planner. It does not know live trends or your analytics. Best-time hints are starting points only, so check your own Insights. Use only real photos, real numbers and real customer feedback with permission.</p></section>
+</main>
+<footer class="foot"><div class="wrap"><span>Everything runs in your browser. Nothing is uploaded.</span><span>Built by Akash Vishwakarma</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
