@@ -1,5 +1,8 @@
 # 30-Day Content Planner
 
+
+**Live:** https://akash991833.github.io/content-planner-30-day/
+
 Get a 30-day posting calendar with ideas, hooks, caption drafts and hashtags for your niche. Edit it, tick posts as done, export to Excel. Free, no login.
 
 ## Screenshots
